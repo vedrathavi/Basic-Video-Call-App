@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Call</title>
+    <script src="/js/socket.io.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <aside class="caller-list-container">
+        <h1 class="caller-list-heading">Contacts</h1>
+        <ul class="caller-list" id="allusers"></ul>
+      </aside>
+      <section class="video-call-container">
+        <div class="username-input">
+          <input type="text" id="username" placeholder="Enter username" />
+          <button class="create-user">Create</button>
+        </div>
+        <div class="video-streams">
+          <div class="video-screens">
+            <div class="local-video">
+              <video id="localVideo" autoplay muted></video>
+            </div>
+            <div class="remote-video">
+              <video id="remoteVideo" autoplay></video>
+            </div>
+          </div>
+          <div class="btn-screen">
+            <button id="end-call-btn" class="call call-disconnect d-none">
+              <span>End Call</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
